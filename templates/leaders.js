@@ -26,20 +26,24 @@
         const avatar = document.createElement("img");
         avatar.src = user.avatar;
         const name = document.createElement("p");
-        name.src = user.name;
+        name.textContent = user.name;
         const valueText = document.createElement("p");
-        valueText.src = user.valueText;
+        valueText.textContent = user.valueText;
         const bar = document.createElement("div");
-        bar.classList = "bar";
-        bar.style.height = Math.round(70*parseInt(user.valueText)/parseInt(data.users[0].valueText))+'%';
+        let barClass = '';
+        if(index === 0) {
+            barClass = "liderBar";
+        } else if(index <3) {
+            barClass = "secondBar";
+        } else {
+            barClass = "firdBar"
+        }
+        bar.classList = `${barClass} bar`;
 
         liderElement.append(avatar, name, valueText, bar);
         elContainer.append(liderElement);
-        if(index%2 === 0) {
-            elementsBox.prepend(elContainer);
-        } else {
-            elementsBox.append(elContainer);
-        }
+        const sddMethod = index%2 === 0 ? "prepend" : "append";
+        elementsBox[sddMethod](elContainer);
 
         return null;
     });
