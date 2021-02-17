@@ -14,7 +14,7 @@
   width: 100%;
 }
 .elContainer{
-  flex-shrink: : 1;
+  flex-shrink:  1;
   flex-grow: 1;
   border: 1px solid red;
   height: 500px;

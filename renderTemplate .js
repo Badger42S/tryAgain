@@ -1,4 +1,13 @@
 const renderTemplate = ({alias, data}) => {
-    
-    return null;
+    const renderTemplates = {
+        leaders: ()=>{},
+        vote: ()=>{},
+        chart: ()=>{},
+        diagram: ()=>{},
+        activity: ()=>{}
+    };
+
+    const resultHtml = renderTemplates[alias](data);
+
+    return resultHtml;
 }
