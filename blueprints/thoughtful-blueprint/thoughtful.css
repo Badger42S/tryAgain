@@ -1,0 +1,54 @@
+.colCentre{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.maxHeight{
+  height: 95vh;
+}
+.leaderBox{
+  width: 80%;
+}
+.elsBox{
+  height: 70%;
+}
+.elContainer{
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.headCl{
+  height: 30%;
+}
+.liderElement{
+  box-sizing: border-box;
+  border: 1px solid red;
+  background-color: gray;
+}
+.buttonEl{
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+.liderElement>p{
+  margin: 5px 17px 5px 17px;
+  padding: 0;
+}
+.liderElement:hover{
+  background-color: gold;
+}
+.oneInColumn{
+  height: 100%;
+  width:100%;
+}
+.twoInColumn{
+  height: 50%;
+  width:100%;
+}
+img{
+  width: 90%;
+  margin: 5%;
+}
+button{
+  border-radius: 50%;
+}
