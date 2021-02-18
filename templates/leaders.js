@@ -1,40 +1,30 @@
- const leadersTemplate = data => {
-    // const mainContainer = document.createElement("div");
-    // mainContainer.classList = "colCentre";
-    // const boxContainer = document.createElement("div");
-    // boxContainer.classList = "colCentre leaderBox";
-    // mainContainer.append(boxContainer);
-    
-    const titleObj ={
+ const leadersTemplate = data => {    
+    const title = {
         htmlTag:"h1",
         properties:{textContent: data.title},
     };
-    const subtitleObj ={
+    const subtitle = {
         htmlTag:"h4",
         properties:{textContent: data.subtitle},
     };
-    const emojiObj ={
+    const emoji = {
         htmlTag:"h2",
         properties:{textContent: data.emoji},
     };
-    const headerObj ={
+
+    const header = {
         htmlTag:"header",
         tagClass:["colCentre"],
-        children:[titleObj, subtitleObj, emojiObj]
+        children:[title, subtitle, emoji]
     };
-    const header = templateFabrica(headerObj);
 
     const elementsBox = document.createElement("div");
     elementsBox.classList = "elsBox";
     data.users.map( (user, index) => {
-        const elContainer = document.createElement("div");
-        elContainer.classList = "elContainer";
-
         const avatar = {
             htmlTag: "img",
             properties:{src: user.avatar}
         };
- 
         const name = {
             htmlTag: "p",
             properties:{textContent: user.name}
@@ -44,7 +34,6 @@
             properties:{textContent: user.valueText}
         }; 
 
-        const bar = document.createElement("div");
         let barClass = '';
         if(index === 0) {
             barClass = "liderBar";
@@ -53,26 +42,35 @@
         } else {
             barClass = "thirdBar"
         }
-        bar.classList = `${barClass} bar`;
+        
+        const bar = {
+            htmlTag: "div",
+            tagClass:["bar", barClass],
+        };
 
-        const liderElement = templateFabrica({
+        const liderElement = {
             htmlTag: "div",
             tagClass:["liderElement" ,"colCentre"],
             children:[avatar, name, valueText, bar]
-        }); 
+        }; 
     
-        elContainer.append(liderElement);
+        const elContainer = templateFabrica({
+            htmlTag: "div",
+            tagClass:["elContainer"],
+            children:[liderElement]
+        });
+      
         const sddMethod = index%2 === 0 ? "prepend" : "append";
         elementsBox[sddMethod](elContainer);
 
         return null;
     });
 
-    const boxContainer = templateFabrica({
+    const boxContainer = {
         htmlTag: "div",
         tagClass:["leaderBox" ,"colCentre"],
         children:[header, elementsBox]
-    });
+    };
 
     const mainContainer = templateFabrica({
         htmlTag: "div",

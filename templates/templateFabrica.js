@@ -1,10 +1,10 @@
-// const shablon ={
-//     htmlTag: 'div',
-//     properties: {propName: value},
-//     tagClass:[],
-//     children: [shablons]
-// };
-
+/* const shablon ={
+        htmlTag: 'div',
+        properties: {propName: value},
+        tagClass:[],
+        children: [shablons]
+    };
+*/
 const templateFabrica = (shablon) => {
     if (!shablon.htmlTag) return shablon;
     const element = document.createElement(shablon.htmlTag);
