@@ -1,0 +1,86 @@
+.chartcolCentre{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.chartleaderBox{
+    flex-flow: row wrap;
+    width: 90%;
+    height: 95vh;
+    color: white;
+    background: radial-gradient(circle, #252117 0%, #1c1810 50%,#0d0c08 100%);
+}
+.chartgreenVar{
+  --themeColor: green;
+}
+.chartgrayVar{
+  --themeColor: gray;
+}
+.chartcommitBox{
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: 80%;
+}
+.chartcommitContainer{
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+.chartcommitGraphContainer{
+  flex-grow: 8;
+}
+.chartcommitNameContainer{
+  flex-grow: 1;
+}
+.chartelContainer{
+  border: 1px solid red;
+}
+.chartcommitElContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+.chartpersonsChart{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.chartliderElement{
+    height: inherit;
+    justify-content: flex-end;
+}
+.chartliderElement>p{
+  margin: 5px 17px 5px 17px;
+  padding: 0;
+}
+.chartbar{
+  width: 60%;
+  height: 10%;
+  border-radius: 10px 10px 0 0;
+  background-color: var(--themeColor);
+}
+.chartactiveBarChart{
+  height: 10%;
+  background: radial-gradient(circle at bottom, #4a2f00 0%, #8c5901 50%,#d58801 100%);
+}
+.chartcommitImg{
+  max-width: 90px;
+  width: 100%;
+}
+
+.chartheader{
+  height: 20%;
+}
+h1,h2,h3,h4,h5{
+  margin: 5px;
+}
+.chartpersonsChart>p{
+margin-right: 1rem;
+}

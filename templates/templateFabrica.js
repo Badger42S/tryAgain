@@ -1,22 +1,13 @@
-/* const shablon ={
-        htmlTag: 'div',
-        properties: {propName: value},
-        tagClass:[],
-        children: [shablons]
+/* const stabValue ={
+        stab: value
+        -----------
     };
 */
-const templateFabrica = (shablon) => {
-    if (!shablon.htmlTag) return shablon;
-    const element = document.createElement(shablon.htmlTag);
-    element.classList = shablon.tagClass?.join(' ');
-    if(shablon.properties){
-        for (const property in shablon.properties) {
-            element[property]=shablon.properties[property];
-        }
-    }
-    shablon.children?.forEach(chiled => {
-        element.append(templateFabrica(chiled));
+export const templateFabrica = (shablon, stabValue) => {
+    let html = shablon.replace(/{\w+\d*}/g, (findKey) => {
+        const key = findKey.replace(/{|}/g, '');
+        return typeof stabValue[key] !== 'undefined' ? stabValue[key] : '';
     });
-
-    return element;
+    
+    return html;
 }

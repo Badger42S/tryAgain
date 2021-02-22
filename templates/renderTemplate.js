@@ -1,11 +1,12 @@
-// import {leadersTemplate} from './leaders';
-// import {testData} from './data';
+import {leadersTemplate} from './leaders.js';
+import {voteTemplate} from './vote.js';
+import {chartTemplate} from './chart.js';
 
- const renderTemplate = ({alias, data}) => {
+export const renderTemplate = ({alias, data}) => {
     const renderTemplates = {
         leaders: leadersTemplate,
-        vote: ()=>{},
-        chart: ()=>{},
+        vote: voteTemplate,
+        chart: chartTemplate,
         diagram: ()=>{},
         activity: ()=>{}
     };
@@ -13,7 +14,4 @@
     const resultHtml = renderTemplates[alias](data);
 
     return resultHtml;
-}
-
-const htmlTest = renderTemplate(testData);
-document.querySelector("body").innerHTML =htmlTest;
+};

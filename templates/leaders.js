@@ -1,82 +1,58 @@
- const leadersTemplate = data => {    
-    const title = {
-        htmlTag:"h1",
-        properties:{textContent: data.title},
-    };
-    const subtitle = {
-        htmlTag:"h4",
-        properties:{textContent: data.subtitle},
-    };
-    const emoji = {
-        htmlTag:"h2",
-        properties:{textContent: data.emoji},
-    };
+import {headerString} from './header.js';
+import {templateFabrica} from './templateFabrica.js';
 
-    const header = {
-        htmlTag:"header",
-        tagClass:["colCentre"],
-        children:[title, subtitle, emoji]
-    };
+const leaderBarString = `
+<div class="leaderelContainer">
+    <div class="leaderliderElement leadercolCentre">
+        <div class="leadercolCentre">
+            <span class="leadersgoupVote">{likeEmoji}</span>
+            <img src="{avatar}" alt="{avatar}">
+        </div>
+        <p>{name}</p>
+        <p>{valueText}</p>
+        <div class="leaderbar {barClass}"></div>
+    </div>
+</div>`;
 
-    const elementsBox = document.createElement("div");
-    elementsBox.classList = "elsBox";
+const leaderString = `
+<div class="leadercolCentre">
+    <div class="leadercolCentre leaderleaderBox">
+        {header}
+        <div class="leaderelsBox">
+            {leader}
+        </div>
+    </div>
+</div>`;
+
+export const leadersTemplate = data => {    
+    let header = templateFabrica(headerString, {
+        title: data.title,
+        subtitle: data.subtitle,
+        emoji: data.emoji
+    });
+
+    let leader = '';
     data.users.map( (user, index) => {
-        const avatar = {
-            htmlTag: "img",
-            properties:{src: user.avatar}
-        };
-        const name = {
-            htmlTag: "p",
-            properties:{textContent: user.name}
-        };
-        const valueText = {
-            htmlTag: "p",
-            properties:{textContent: user.valueText}
-        }; 
-
         let barClass = '';
         if(index === 0) {
-            barClass = "liderBar";
+            barClass = "leaderliderBar";
         } else if(index <3) {
-            barClass = "secondBar";
+            barClass = "leadersecondBar";
         } else {
-            barClass = "thirdBar"
+            barClass = "leaderthirdBar"
         }
-        
-        const bar = {
-            htmlTag: "div",
-            tagClass:["bar", barClass],
-        };
-
-        const liderElement = {
-            htmlTag: "div",
-            tagClass:["liderElement" ,"colCentre"],
-            children:[avatar, name, valueText, bar]
-        }; 
-    
-        const elContainer = templateFabrica({
-            htmlTag: "div",
-            tagClass:["elContainer"],
-            children:[liderElement]
+        let leaderString = templateFabrica(leaderBarString, {
+            likeEmoji: data.selectedUserId === user.id ? '👍' : undefined,
+            avatar: user.avatar,
+            name: user.name,
+            valueText: user.valueText,
+            barClass: barClass
         });
-      
-        const sddMethod = index%2 === 0 ? "prepend" : "append";
-        elementsBox[sddMethod](elContainer);
-
-        return null;
+        leader = index%2 === 0 ? leader + leaderString : leaderString + leader;
     });
-
-    const boxContainer = {
-        htmlTag: "div",
-        tagClass:["leaderBox" ,"colCentre"],
-        children:[header, elementsBox]
-    };
-
-    const mainContainer = templateFabrica({
-        htmlTag: "div",
-        tagClass:["colCentre"],
-        children:[boxContainer]
+    
+    return templateFabrica(leaderString, {
+        header: header,
+        leader: leader
     });
-   
-    return mainContainer.innerHTML;
-}
+};

@@ -1,0 +1,54 @@
+.thoughtfulcolCentre{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.thoughtfulmaxHeight{
+  height: 95vh;
+}
+.thoughtfulleaderBox{
+  width: 80%;
+}
+.thoughtfulelsBox{
+  height: 70%;
+}
+.thoughtfulelContainer{
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.thoughtfulheadCl{
+  height: 30%;
+}
+.thoughtfulliderElement{
+  box-sizing: border-box;
+  border: 1px solid red;
+  background-color: gray;
+}
+.thoughtfulbuttonEl{
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+.thoughtfulliderElement>p{
+  margin: 5px 17px 5px 17px;
+  padding: 0;
+}
+.thoughtfulliderElement:hover{
+  background-color: gold;
+}
+.thoughtfuloneInColumn{
+  height: 100%;
+  width:100%;
+}
+.thoughtfultwoInColumn{
+  height: 50%;
+  width:100%;
+}
+img{
+  width: 90%;
+  margin: 5%;
+}
+button{
+  border-radius: 50%;
+}
