@@ -1,6 +1,4 @@
 import {testData} from './data.js';
-import {renderTemplate} from './renderTemplate.js';
-
 
 const queryParam= window.location.search;
 const aliasParam = (new URLSearchParams(queryParam).get('slide')||1) - 1;

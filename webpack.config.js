@@ -6,7 +6,7 @@ module.exports = {
     entry: './src',
     output: {
       path: path.resolve(__dirname, 'build'),
-      filename: 'bundle.js',
+      filename: 'stories.js',
     },
     devServer: {
       contentBase: './dist',
@@ -20,7 +20,9 @@ module.exports = {
         ],
       },
     plugins: [
-      new MiniCssExtractPlugin(),
+      new MiniCssExtractPlugin({
+        filename: 'stories.css'
+      }),
       new HtmlWebpackPlugin({
         inject: false,
         hash: true,
