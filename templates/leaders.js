@@ -2,7 +2,7 @@ import {headerString} from './header.js';
 import {templateFabrica} from './templateFabrica.js';
 
 const leaderBarString = `
-<div class="leaderelContainer">
+<div class="leaderelContainer ">
     <div class="leaderliderElement leadercolCentre">
         <div class="leadercolCentre">
             <span class="leadersgoupVote">{likeEmoji}</span>
@@ -15,8 +15,8 @@ const leaderBarString = `
 </div>`;
 
 const leaderString = `
-<div class="leadercolCentre">
-    <div class="leadercolCentre leaderleaderBox">
+<div class="leadercolCenrcoltre">
+    <div class="leadeCentre leaderleaderBox mainLeaderConatiner">
         {header}
         <div class="leaderelsBox">
             {leader}

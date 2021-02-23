@@ -1,6 +1,7 @@
 .leaderleaderBox{
     flex-flow: row wrap;
     width: 80%;
+    height: 100%;
     color: white;
     background: radial-gradient(circle, #252117 0%, #1c1810 50%,#0d0c08 100%);
 }
@@ -20,10 +21,17 @@
 .leaderelContainer{
   flex-shrink:  1;
   flex-grow: 1;
-  height: 100vh;
+  height: 100%;
   flex-basis: 10%;
   margin-left: -16px;
   margin-right: -16px;
+}
+.mainLeaderConatiner{
+  height: 100vh;
+  overflow: hidden;
+}
+.barContainer{
+  height: 100%;
 }
 .leadersgoupVote{
   position: absolute;

@@ -89,5 +89,20 @@ export const testData = [
         {"id": 9, "name": "Сергей Бережной", "avatar": "9.jpg", "valueText": "4 голоса"}
       ]
     }
+  },
+  {
+    "alias": "diagram",
+    "data": {
+      "title": "Размер коммитов",
+      "subtitle": "Спринт № 213",
+      "totalText": "182 коммита",
+      "differenceText": "+42 с прошлого спринта",
+      "categories": [
+        {"title": "> 1001 строки", "valueText": "30 коммитов", "differenceText": "+8 коммитов"},
+        {"title": "501 — 1000 строк", "valueText": "32 коммита", "differenceText": "+6 коммитов"},
+        {"title": "101 — 500 строк", "valueText": "58 коммитов", "differenceText": "+16 коммитов"},
+        {"title": "1 — 100 строк", "valueText": "62 коммита", "differenceText": "+12 коммитов"}
+      ]
+    }
   }
 ];
