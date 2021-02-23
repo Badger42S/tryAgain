@@ -1,0 +1,67 @@
+.activityBox{
+    width: 100%;
+    height: 100vh;
+}
+.activityInfo{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 65%;
+}
+.activityChatColumn{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+.activityLegend{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.activityCentre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.activityChatRow{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+}
+.activityLegendRow{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: 100%;
+}
+.activityLegendBox{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 10%;
+    width: 100%;
+}
+.activityChatBar{
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    padding: 2px;
+}
+.activityLegendBar {
+    height: 10%;
+    width: 80%;
+    border: 10px;
+}
+.activityColorZero{
+    background-color: #161412;
+}
+.activityColorOne{
+    background: #403d3b;
+}
+.activityColorTwo{
+    background: #734d08;
+}
+.activityColorThree{
+    background: #bc7b0a;
+}
