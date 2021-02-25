@@ -51,17 +51,17 @@
 .activityLegendBar {
     height: 10%;
     width: 80%;
-    border: 10px;
+    border-radius: 10px;
 }
 .activityColorZero{
     background-color: #161412;
 }
 .activityColorOne{
-    background: #403d3b;
+    background-color: #403d3b;
 }
 .activityColorTwo{
-    background: #734d08;
+    background-color: #734d08;
 }
 .activityColorThree{
-    background: #bc7b0a;
+    background-color: #bc7b0a;
 }
