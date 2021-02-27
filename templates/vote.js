@@ -1,5 +1,6 @@
 import {headerString} from './header.js';
 import {templateFabrica} from './templateFabrica.js';
+import {images} from './images.js';
 
 const voteString = `
 <div class="votecolCentre voteleaderBox">
@@ -11,14 +12,10 @@ const voteString = `
           {persons2}
           <div class="voteoneInColumn">
             <div class="votebuttonEl votecolCentre votetwoInColumn">
-                <button type="button" name="up">
-                  <img src="buttonImage" alt="buttonImage">
-                </button>
+              {button}
             </div>
             <div class="votebuttonEl votecolCentre votetwoInColumn">
-              <button type="button" name="down">
-                <img src="buttonImage" alt="buttonImage">
-              </button>
+              {button}
             </div>
           </div>
           {persons3}
@@ -38,6 +35,11 @@ const person =`
   <img src="{avatar}" alt="{avatar}">
   <p>{name}</p>
 </div>`;
+
+const button = `
+<button type="button" name="up">
+<img src="{buttonImage}" alt="buttonImage">
+</button>`;
 
 export const voteTemplate = data => {
   const header = templateFabrica(headerString, {
@@ -96,11 +98,16 @@ export const voteTemplate = data => {
     person: person4
   });
 
+  const buttons = templateFabrica(button, {
+    buttonImage: images['button-dark.svg']
+  });
+
   return templateFabrica(voteString, {
     header: header,
     persons1: person1,
     persons2: person2,
     persons3: person3,
-    persons4: person4
+    persons4: person4,
+    button: buttons
   });
 }

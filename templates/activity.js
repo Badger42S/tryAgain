@@ -59,13 +59,13 @@ export const activityTemplate = data => {
                 activityChatColor = 'activityColorThree';
                 heightBar = 100;
             } else if(arr > 2) {
-                activityChatColor = 'activityColorOne';
+                activityChatColor = 'activityColorTwo';
                 heightBar = 60;
             } else if(arr > 0) {
-                activityChatColor = 'activityColorTwo';
+                activityChatColor = 'activityColorOne';
                 heightBar = 20;
             } else {
-                activityChatColor = 'activityColorOne';
+                activityChatColor = 'activityColorZero';
                 heightBar = 0;
             };
 
