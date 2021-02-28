@@ -71,10 +71,14 @@
 .header{
   height: 25%;
 }
-img{
+.liderImg{
   width: 50%;
+  filter: grayscale(100%);
+  border-radius: 50%;
+  cursor: pointer;
 }
 p{
   width: 50%;
   text-align: center;
+  font-family: 'Roboto';
 }

@@ -1,12 +1,13 @@
 import {headerString} from './header.js';
 import {templateFabrica} from './templateFabrica.js';
+import {images} from './images.js';
 
 const leaderBarString = `
 <div class="leaderelContainer ">
     <div class="leaderliderElement leadercolCentre">
         <div class="leadercolCentre">
             <span class="leadersgoupVote">{likeEmoji}</span>
-            <img src="{avatar}" alt="{avatar}">
+            <img src="{avatar}" alt="{avatar}" class="liderImg">
         </div>
         <p>{name}</p>
         <p>{valueText}</p>
@@ -43,7 +44,7 @@ export const leadersTemplate = data => {
         }
         let leaderString = templateFabrica(leaderBarString, {
             likeEmoji: data.selectedUserId === user.id ? '👍' : undefined,
-            avatar: user.avatar,
+            avatar: images[user.avatar],
             name: user.name,
             valueText: user.valueText,
             barClass: barClass

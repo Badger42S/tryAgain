@@ -25,6 +25,15 @@ module.exports = {
               outputPath: 'images',
             }
           },
+          {
+            test: /\.ttf$/i,
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts',
+              publicPath: 'fonts/'
+            }
+          },
         ],
       },
     plugins: [

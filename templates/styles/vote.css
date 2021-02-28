@@ -45,6 +45,7 @@
 }
 .voteoneInColumn{
   height: 100%;
+  width: 100%;
 }
 .votetwoInColumn{
   height: 50%;
@@ -61,9 +62,10 @@
 .voteavas{
   width: 75%;
 }
-img{
+.voteImg{
   width: 100%;
   filter: grayscale(100%);
+  border-radius: 50%;
   cursor: pointer;
 }
 button{

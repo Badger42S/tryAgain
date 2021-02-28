@@ -71,12 +71,16 @@
 .header{
   height: 25%;
 }
-img{
+.liderImg{
   width: 50%;
+  filter: grayscale(100%);
+  border-radius: 50%;
+  cursor: pointer;
 }
 p{
   width: 50%;
   text-align: center;
+  font-family: 'Roboto';
 }
 .voteleaderBox{
   color: white;
@@ -125,6 +129,7 @@ p{
 }
 .voteoneInColumn{
   height: 100%;
+  width: 100%;
 }
 .votetwoInColumn{
   height: 50%;
@@ -141,9 +146,10 @@ p{
 .voteavas{
   width: 75%;
 }
-img{
+.voteImg{
   width: 100%;
   filter: grayscale(100%);
+  border-radius: 50%;
   cursor: pointer;
 }
 button{
@@ -396,4 +402,16 @@ margin-right: 1rem;
 }
 .activityColorThree{
     background-color: #bc7b0a;
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Bold.ttf) format('truetype');
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Regular.ttf) format('truetype');
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url(fonts/Roboto-Medium.ttf) format('truetype');
 }

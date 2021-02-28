@@ -1,5 +1,6 @@
 import {headerString} from './header.js';
 import {templateFabrica} from './templateFabrica.js';
+import {images} from './images.js';
 
 const commitString = `
 <div class="chartcolCentre chartleaderBox grayVar">
@@ -36,7 +37,7 @@ export const chartTemplate = data => {
   let commitPersons = '';
   data.users.forEach(user => {
     commitPersons += templateFabrica(commitPersonsString, {
-      avatar: user.avatar,
+      avatar: images[user.avatar],
       name: user.name,
       valueText: user.valueText
     });

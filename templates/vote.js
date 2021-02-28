@@ -32,7 +32,7 @@ const voteString = `
 
 const person =`
 <div class="votevotePerson votecolCentre" style="height:{heightEl}%">
-  <img src="{avatar}" alt="{avatar}">
+  <img src="{avatar}" alt="{avatar}" class="voteImg">
   <p>{name}</p>
 </div>`;
 
@@ -56,7 +56,7 @@ export const voteTemplate = data => {
   let person1='';
   person1Users.forEach(user => {
     person1 += templateFabrica(person, {
-      avatar: user.avatar,
+      avatar: images[user.avatar],
       name: user.name,
       heightEl: 100
     });
@@ -67,7 +67,7 @@ export const voteTemplate = data => {
   let person2='';
   person2Users.forEach(user => {
     person2 += templateFabrica(person, {
-      avatar: user.avatar,
+      avatar: images[user.avatar],
       name: user.name,
       heightEl: 50
     });
@@ -78,7 +78,7 @@ export const voteTemplate = data => {
   let person3='';
   person3Users.forEach(user => {
     person3 += templateFabrica(person, {
-      avatar: user.avatar,
+      avatar: images[user.avatar],
       name: user.name,
       heightEl: 50
     });
@@ -89,7 +89,7 @@ export const voteTemplate = data => {
   let person4='';
   person4Users.forEach(user => {
     person4 += templateFabrica(person, {
-      avatar: user.avatar,
+      avatar: images[user.avatar],
       name: user.name,
       heightEl: 100
     });
