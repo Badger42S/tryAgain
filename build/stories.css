@@ -1,9 +1,23 @@
+.dark{
+    --mainBackGroundTheme: radial-gradient(circle at 50% 50%, #130E00 0%, #000000 100%);
+    --leaderFirstColor: radial-gradient(circle at 50% 50%, #FFA300 0%, #2D1C00 100%);
+    --leaderFirstShadow: inset 0px 6px 15px 0px #FFA200,inset -1px 1px 1px 0px #FFFFFF;
+    --leaderSecondColor: radial-gradient(circle at 50% 50%, #000000 0%, #231900 0%, #4D4D4D 100%),linear-gradient(180deg, #000000 0%, #000000 100%);
+    --leaderSecondShadow: inset 2px 2px 16px 0px #676767,inset -1px 1px 1px 0px #FFFFFF;
+    --filterDark: grayscale(100%);
+    --diagramUnitF: #F4B000;
+
+    --diagramUnitS: #af7f06;
+    
+    --diagramUnitT: #918F8A;
+    
+    --diagramUnitFo: #261C00;
+  }
 .leaderleaderBox{
     flex-flow: row wrap;
-    width: 80%;
+    width: 85%;
     height: 100%;
     color: white;
-    background: radial-gradient(circle, #252117 0%, #1c1810 50%,#0d0c08 100%);
 }
 .leadercolCentre{
   position: relative;
@@ -15,14 +29,21 @@
 .leaderelsBox{
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
   width: 100%;
   height: 75%;
 }
+.leadercolCenrcoltre{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: var(--mainBackGroundTheme);
+}
 .leaderelContainer{
-  flex-shrink:  1;
-  flex-grow: 1;
   height: 100%;
-  flex-basis: 10%;
+  width: 100%;
   margin-left: -16px;
   margin-right: -16px;
 }
@@ -51,29 +72,41 @@
 }
 .leaderliderBar{
   height: 70%;
-  background: radial-gradient(circle at bottom, #4a2f00 0%, #8c5901 50%,#d58801 100%);
+  background: var(--leaderFirstColor);
+  box-shadow: var(--leaderFirstShadow);
   z-index: 5;
+  border-radius: 6px;
 }
 .leadersecondBar{
   height: 60%;
-  background: radial-gradient(circle at bottom, #0e0c06 0%, #201c12 50%,#3b3831 100%);
+  background: var(--leaderSecondColor);
+  box-shadow: var(--leaderSecondShadow);
   z-index: 4;
+  border-radius: 6px;
 }
 .leaderthirdBar{
   height: 50%;
-  background: radial-gradient(circle at bottom, #0e0c06 0%, #201c12 50%,#3b3831 100%);
+  background: var(--leaderSecondColor);
+  box-shadow: var(--leaderSecondShadow);
   z-index: 3;
+  border-radius: 6px;
 }
 .leaderbar{
-  border-radius: 5% 5% 0 0;
   width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+}
+.positionText{
+  font-size: 30px;
 }
 .header{
   height: 25%;
 }
 .liderImg{
   width: 50%;
-  filter: grayscale(100%);
+  filter: var(--filterDark);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -170,17 +203,12 @@ button{
 }
 .chartleaderBox{
     flex-flow: row wrap;
-    width: 90%;
+    width: 100%;
     height: 100vh;
     color: white;
-    background: radial-gradient(circle, #252117 0%, #1c1810 50%,#0d0c08 100%);
+    background: var(--mainBackGroundTheme);
 }
-.chartgreenVar{
-  --themeColor: green;
-}
-.grayVar{
-  --themeColor: gray;
-}
+
 .chartcommitBox{
   display: flex;
   flex-flow: column wrap;
@@ -217,8 +245,8 @@ button{
 }
 
 .chartliderElement{
-    height: inherit;
-    justify-content: flex-end;
+  height: inherit;
+  justify-content: flex-end;
 }
 .chartliderElement>p{
   margin: 5px 17px 5px 17px;
@@ -226,30 +254,30 @@ button{
 }
 .chartbar{
   width: 60%;
-  height: 10%;
-  border-radius: 10px 10px 0 0;
-  background-color: var(--themeColor);
+  min-height: 1%;
+  border-radius: 6px;
+  background: var(--leaderSecondColor);
+  box-shadow: var(--leaderSecondShadow);
 }
 .chartactiveBarChart{
-  height: 10%;
-  background: radial-gradient(circle at bottom, #4a2f00 0%, #8c5901 50%,#d58801 100%);
+  border-radius: 6px;
+  background: var(--leaderFirstColor);
+  box-shadow: var(--leaderFirstShadow);
 }
 .chartcommitImg{
+  width: 50%;
   max-width: 90px;
-  width: 100%;
+  filter: var(--filterDark);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .chartheader{
   height: 20%;
 }
-h1,h2,h3,h4,h5{
-  margin: 5px;
-}
+
 .chartpersonsChart>p{
 margin-right: 1rem;
-}
-.grayVar{
-  --themeColor: gray;
 }
 .diagramcolCentre{
     display: flex;
@@ -257,20 +285,26 @@ margin-right: 1rem;
     justify-content: center;
     align-items: center;
   }
+  .dotText{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
   .diagramleaderBox{
     width: 100vw;
     height: 100vh;
     color: white;
-    background: radial-gradient(circle, #252117 0%, #1c1810 50%,#0d0c08 100%);
+    background: var(--mainBackGroundTheme);
   }
   .diagramcommitBox{
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
-    height: 75%;
+    height: 80%;
   }
   .diagramcommitLegend{
-    width: 60%;
+    width: 50%;
   }
 
   .diagramcommitElContainer{
@@ -299,57 +333,115 @@ margin-right: 1rem;
     justify-content: center;
     align-items: center;
     margin: 0;
-    width: 40%;
+    width: 50%;
     position: relative;
   }
   .aboutcommitString{
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 75%;
 }
   .diagramchart{
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
   }
+  .circleBox{
+    border-radius: 50%;
+    height: 1vh;
+    width: 1vh;
+    margin-right: 1em;
+  }
+  .circleBox:nth-child(1) {
+    background: var(--diagramUnitF);
+}
   .unit {
-    fill: #6e501c;
-    stroke-width: 10;
+    stroke-width: 5;
+    fill: none;
 }
   .unit:nth-child(1) {
-    stroke: #d18703;
+    stroke: var(--diagramUnitF);
 }
   
 .unit:nth-child(2) {
-    stroke: #82580f;
+    stroke: var(--diagramUnitS);
   }
   
   .unit:nth-child(3) {
-      stroke: #826d48;
+      stroke: var(--diagramUnitT);
     }
   .unit:nth-child(4) {
-      stroke: #57421d;
+      stroke: var(--diagramUnitFo);
   }
   .diagramBrakeLine{
-      width: 70%;
+      width: 100%;
   }
-      h1, h4{
-        margin: 5% auto 5% auto;
-      }
 .activityBox{
     width: 100%;
     height: 100vh;
+    color: white;
+    background: var(--mainBackGroundTheme);
 }
 .activityInfo{
     display: flex;
     flex-flow: column nowrap;
-    width: 100%;
+    width: 90%;
     height: 65%;
 }
 .activityChatColumn{
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+}
+.activityChatRow{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: calc(3vw);
+    margin-top: calc(-1vh);
+}
+@media(min-width: 501px){
+    .activityChatRow{
+        height: calc(3vw);
+        margin-top: calc(-1vh);
+    }
+    .activityChatRow:nth-child(2n){
+        padding-left: calc(3vw);
+    }
+}
+@media(max-width: 500px){
+    .activityInfo{
+        height: 80%;
+    }
+    .header{
+        height: 10%;
+        padding: 5px;
+        margin: 10px;
+    }
+    .header *{
+        padding: 5px;
+        margin: 5px;
+    }
+    .activityChatRow{
+        flex-direction: column;
+        width: 6vw;
+        height: 100%;
+    }
+    .activityChatColumn{
+        flex-direction: row;
+    }
+  .activityImg:nth-child(2n){
+        margin-right: -3vw;
+    }
+    .activityImg {
+        width: 6vw;
+        margin-bottom: -2vw;
+        height: 6vw;
+    }
 }
 .activityLegend{
     display: flex;
@@ -361,13 +453,8 @@ margin-right: 1rem;
 .activityCentre{
     display: flex;
     flex-flow: column nowrap;
-}
-.activityChatRow{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
-    height: 100%;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 .activityLegendRow{
     display: flex;
@@ -402,6 +489,9 @@ margin-right: 1rem;
 }
 .activityColorThree{
     background-color: #bc7b0a;
+}
+.activityImg{
+    width: 100%;
 }
 @font-face{
     font-family: 'Roboto';

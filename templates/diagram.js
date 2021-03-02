@@ -2,7 +2,7 @@ import {headerString} from './header.js';
 import {templateFabrica} from './templateFabrica.js';
 
 const diagramString = `
-<div class="diagramleaderBox">
+<div class="diagramleaderBox dark">
     {header}
   <div class="diagramcommitBox">
       <div class="diagramcommitDiagram">
@@ -20,7 +20,7 @@ const diagramString = `
 
 const commitDiagramString = '<circle class="unit" style="stroke-dasharray: {value} 100; stroke-dashoffset: {valueOffset}" r="15.9" cx="50%" cy="50%"></circle>';
 const textInDiagramString = '<div class="diagramText"><p>{totalText}</p><p>{differenceText}</p></div>';
-const commitSizeSring = '<div class="aboutcommitString"><span class="diagramLegend">{size}</span><div>{differenceText}  {valueText}</div></div><hr class="diagramBrakeLine">';
+const commitSizeSring = '<div class="aboutcommitString"><div class="dotText"><div class="circleBox"></div><span class="diagramLegend">{size}</span></div><span>{differenceText}  {valueText}</span></div><hr class="diagramBrakeLine">';
 
 export const diagramTemplate = data => {
     const header = templateFabrica(headerString, {

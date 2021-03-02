@@ -1,8 +1,9 @@
 import {headerString} from './header.js';
 import {templateFabrica} from './templateFabrica.js';
+import {images} from './images.js';
 
 const activityString =`
-<div class="activityCentre activityBox">
+<div class="activityCentre activityBox dark">
  {header}
     <div class="activityInfo">
         <div class="activityChatColumn">
@@ -16,7 +17,7 @@ const activityChatBoxString = `
 <div class="activityChatRow">
  {activityChatElement}
 </div>`;
-const activityChatString = `<div class="activityChatBar {activityChatColor}" style="height:{heightBar}%"></div>`;
+const activityChatString = `<img src={heightBar} class="activityImg">`;
 
 const activityLegendString = `
 <div class="activityLegendBox">
@@ -48,32 +49,28 @@ export const activityTemplate = data => {
     });
 
     let activityChat = '';
+    let idx = 0;
     for (const day in data.data) {
         const dayData = data.data[day];
         let activityChatElement ='';
         
         dayData.forEach( arr => {
-            let activityChatColor;
             let heightBar;
             if(arr > 4) {
-                activityChatColor = 'activityColorThree';
-                heightBar = 100;
+                heightBar = 'extra';
             } else if(arr > 2) {
-                activityChatColor = 'activityColorTwo';
-                heightBar = 60;
+                heightBar = 'max';
             } else if(arr > 0) {
-                activityChatColor = 'activityColorOne';
-                heightBar = 20;
+                heightBar = 'mid';
             } else {
-                activityChatColor = 'activityColorZero';
-                heightBar = 0;
+                heightBar = 'min';
             };
 
             activityChatElement += templateFabrica(activityChatString, {
-                activityChatColor: activityChatColor,
-                heightBar: heightBar,
+                heightBar: images[`${heightBar}-dark.png`],
             });
         });
+        idx++;
         activityChat += templateFabrica(activityChatBoxString, {
             activityChatElement: activityChatElement,
         });

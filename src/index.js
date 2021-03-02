@@ -1,3 +1,4 @@
+import '../templates/styles/dark.css';
 import '../templates/styles/leader.css';
 import '../templates/styles/vote.css';
 import '../templates/styles/chart.css';

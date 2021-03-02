@@ -1,0 +1,15 @@
+.dark{
+    --mainBackGroundTheme: radial-gradient(circle at 50% 50%, #130E00 0%, #000000 100%);
+    --leaderFirstColor: radial-gradient(circle at 50% 50%, #FFA300 0%, #2D1C00 100%);
+    --leaderFirstShadow: inset 0px 6px 15px 0px #FFA200,inset -1px 1px 1px 0px #FFFFFF;
+    --leaderSecondColor: radial-gradient(circle at 50% 50%, #000000 0%, #231900 0%, #4D4D4D 100%),linear-gradient(180deg, #000000 0%, #000000 100%);
+    --leaderSecondShadow: inset 2px 2px 16px 0px #676767,inset -1px 1px 1px 0px #FFFFFF;
+    --filterDark: grayscale(100%);
+    --diagramUnitF: #F4B000;
+
+    --diagramUnitS: #af7f06;
+    
+    --diagramUnitT: #918F8A;
+    
+    --diagramUnitFo: #261C00;
+  }

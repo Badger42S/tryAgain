@@ -1,9 +1,12 @@
-.grayVar{
-  --themeColor: gray;
-}
 .diagramcolCentre{
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .dotText{
+    display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
   }
@@ -11,16 +14,16 @@
     width: 100vw;
     height: 100vh;
     color: white;
-    background: radial-gradient(circle, #252117 0%, #1c1810 50%,#0d0c08 100%);
+    background: var(--mainBackGroundTheme);
   }
   .diagramcommitBox{
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
-    height: 75%;
+    height: 80%;
   }
   .diagramcommitLegend{
-    width: 60%;
+    width: 50%;
   }
 
   .diagramcommitElContainer{
@@ -49,40 +52,46 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-    width: 40%;
+    width: 50%;
     position: relative;
   }
   .aboutcommitString{
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 75%;
 }
   .diagramchart{
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
   }
+  .circleBox{
+    border-radius: 50%;
+    height: 1vh;
+    width: 1vh;
+    margin-right: 1em;
+  }
+  .circleBox:nth-child(1) {
+    background: var(--diagramUnitF);
+}
   .unit {
-    fill: #6e501c;
-    stroke-width: 10;
+    stroke-width: 5;
+    fill: none;
 }
   .unit:nth-child(1) {
-    stroke: #d18703;
+    stroke: var(--diagramUnitF);
 }
   
 .unit:nth-child(2) {
-    stroke: #82580f;
+    stroke: var(--diagramUnitS);
   }
   
   .unit:nth-child(3) {
-      stroke: #826d48;
+      stroke: var(--diagramUnitT);
     }
   .unit:nth-child(4) {
-      stroke: #57421d;
+      stroke: var(--diagramUnitFo);
   }
   .diagramBrakeLine{
-      width: 70%;
+      width: 100%;
   }
-      h1, h4{
-        margin: 5% auto 5% auto;
-      }

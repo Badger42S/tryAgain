@@ -1,17 +1,69 @@
 .activityBox{
     width: 100%;
     height: 100vh;
+    color: white;
+    background: var(--mainBackGroundTheme);
 }
 .activityInfo{
     display: flex;
     flex-flow: column nowrap;
-    width: 100%;
+    width: 90%;
     height: 65%;
 }
 .activityChatColumn{
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+}
+.activityChatRow{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: calc(3vw);
+    margin-top: calc(-1vh);
+}
+@media(min-width: 501px){
+    .activityChatRow{
+        height: calc(3vw);
+        margin-top: calc(-1vh);
+    }
+    .activityChatRow:nth-child(2n){
+        padding-left: calc(3vw);
+    }
+}
+@media(max-width: 500px){
+    .activityInfo{
+        height: 80%;
+    }
+    .header{
+        height: 10%;
+        padding: 5px;
+        margin: 10px;
+    }
+    .header *{
+        padding: 5px;
+        margin: 5px;
+    }
+    .activityChatRow{
+        flex-direction: column;
+        width: 6vw;
+        height: 100%;
+    }
+    .activityChatColumn{
+        flex-direction: row;
+    }
+  .activityImg:nth-child(2n){
+        margin-right: -3vw;
+    }
+    .activityImg {
+        width: 6vw;
+        margin-bottom: -2vw;
+        height: 6vw;
+    }
 }
 .activityLegend{
     display: flex;
@@ -23,13 +75,8 @@
 .activityCentre{
     display: flex;
     flex-flow: column nowrap;
-}
-.activityChatRow{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
-    height: 100%;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 .activityLegendRow{
     display: flex;
@@ -64,4 +111,7 @@
 }
 .activityColorThree{
     background-color: #bc7b0a;
+}
+.activityImg{
+    width: 100%;
 }

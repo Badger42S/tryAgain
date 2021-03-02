@@ -3,7 +3,7 @@ import {templateFabrica} from './templateFabrica.js';
 import {images} from './images.js';
 
 const commitString = `
-<div class="chartcolCentre chartleaderBox grayVar">
+<div class="chartcolCentre chartleaderBox dark">
  {header}
   <div class="chartcommitBox">
     <div class="chartcommitGraphContainer chartcommitContainer">

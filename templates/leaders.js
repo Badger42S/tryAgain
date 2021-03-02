@@ -3,7 +3,7 @@ import {templateFabrica} from './templateFabrica.js';
 import {images} from './images.js';
 
 const leaderBarString = `
-<div class="leaderelContainer ">
+<div class="leaderelContainer">
     <div class="leaderliderElement leadercolCentre">
         <div class="leadercolCentre">
             <span class="leadersgoupVote">{likeEmoji}</span>
@@ -11,12 +11,12 @@ const leaderBarString = `
         </div>
         <p>{name}</p>
         <p>{valueText}</p>
-        <div class="leaderbar {barClass}"></div>
+        <div class="leaderbar {barClass}"><p class="positionText">{position}</p></div>
     </div>
 </div>`;
 
 const leaderString = `
-<div class="leadercolCenrcoltre">
+<div class="leadercolCenrcoltre dark">
     <div class="leadeCentre leaderleaderBox mainLeaderConatiner">
         {header}
         <div class="leaderelsBox">
@@ -47,9 +47,10 @@ export const leadersTemplate = data => {
             avatar: images[user.avatar],
             name: user.name,
             valueText: user.valueText,
+            position: index + 1,
             barClass: barClass
         });
-        leader = index%2 === 0 ? leader + leaderString : leaderString + leader;
+        leader = index%2 !== 0 ? leader + leaderString : leaderString + leader;
     });
     
     return templateFabrica(leaderString, {
